@@ -135,10 +135,10 @@
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QLCDNumber" name="lcdNumber"/>
+      <widget class="QLCDNumber" name="lcdNumber_rightFirstMeta"/>
      </item>
      <item row="2" column="1">
-      <widget class="QLCDNumber" name="lcdNumber_2"/>
+      <widget class="QLCDNumber" name="lcdNumber_leftFirstMeta"/>
      </item>
      <item row="3" column="0">
       <widget class="QLabel" name="label_rightThirdMeta">
@@ -155,10 +155,10 @@
       </widget>
      </item>
      <item row="4" column="0">
-      <widget class="QLCDNumber" name="lcdNumber_3"/>
+      <widget class="QLCDNumber" name="lcdNumber_rightThirdMeta"/>
      </item>
      <item row="4" column="1">
-      <widget class="QLCDNumber" name="lcdNumber_4"/>
+      <widget class="QLCDNumber" name="lcdNumber_leftThirdMeta"/>
      </item>
      <item row="5" column="0">
       <widget class="QLabel" name="label_rightHeel">
@@ -175,10 +175,10 @@
       </widget>
      </item>
      <item row="6" column="0">
-      <widget class="QLCDNumber" name="lcdNumber_5"/>
+      <widget class="QLCDNumber" name="lcdNumber_rightHeel"/>
      </item>
      <item row="6" column="1">
-      <widget class="QLCDNumber" name="lcdNumber_6"/>
+      <widget class="QLCDNumber" name="lcdNumber_leftHeel"/>
      </item>
     </layout>
    </widget>

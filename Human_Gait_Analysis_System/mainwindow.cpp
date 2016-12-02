@@ -35,7 +35,6 @@ void MainWindow::updateView()
     if(sensorConnectedAndHasData){
         sensors->d = sensors->leftAnkle->getCurrentData();
         updateUserInterface(&sensors->d);
-        qDebug() << "Hello";
     }
 }
 
@@ -53,8 +52,11 @@ void MainWindow::readData(){
     QString myData(data);
     QRegExp rx("[,]");
     QStringList FSRData = myData.split(",", QString::SkipEmptyParts);
-    if(FSRData.size() != 0)
-        qDebug() << FSRData;
+    if(FSRData.size() != 0){
+        ui->lcdNumber_rightFirstMeta->display(FSRData[0]);
+        ui->lcdNumber_rightThirdMeta->display(FSRData[1]);
+        ui->lcdNumber_rightHeel->display(FSRData[2]);
+    }
 }
 
 void MainWindow::readyToRecordData()

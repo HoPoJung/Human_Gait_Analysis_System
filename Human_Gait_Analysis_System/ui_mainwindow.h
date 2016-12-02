@@ -52,16 +52,16 @@ public:
     QLabel *label_leftFoot;
     QLabel *label_rightFirstMeta;
     QLabel *label_leftFirstMeta;
-    QLCDNumber *lcdNumber;
-    QLCDNumber *lcdNumber_2;
+    QLCDNumber *lcdNumber_rightFirstMeta;
+    QLCDNumber *lcdNumber_leftFirstMeta;
     QLabel *label_rightThirdMeta;
     QLabel *label_leftThirdMeta;
-    QLCDNumber *lcdNumber_3;
-    QLCDNumber *lcdNumber_4;
+    QLCDNumber *lcdNumber_rightThirdMeta;
+    QLCDNumber *lcdNumber_leftThirdMeta;
     QLabel *label_rightHeel;
     QLabel *label_leftHeel;
-    QLCDNumber *lcdNumber_5;
-    QLCDNumber *lcdNumber_6;
+    QLCDNumber *lcdNumber_rightHeel;
+    QLCDNumber *lcdNumber_leftHeel;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -185,15 +185,15 @@ public:
 
         gridLayout_2->addWidget(label_leftFirstMeta, 1, 1, 1, 1);
 
-        lcdNumber = new QLCDNumber(widget1);
-        lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
+        lcdNumber_rightFirstMeta = new QLCDNumber(widget1);
+        lcdNumber_rightFirstMeta->setObjectName(QStringLiteral("lcdNumber_rightFirstMeta"));
 
-        gridLayout_2->addWidget(lcdNumber, 2, 0, 1, 1);
+        gridLayout_2->addWidget(lcdNumber_rightFirstMeta, 2, 0, 1, 1);
 
-        lcdNumber_2 = new QLCDNumber(widget1);
-        lcdNumber_2->setObjectName(QStringLiteral("lcdNumber_2"));
+        lcdNumber_leftFirstMeta = new QLCDNumber(widget1);
+        lcdNumber_leftFirstMeta->setObjectName(QStringLiteral("lcdNumber_leftFirstMeta"));
 
-        gridLayout_2->addWidget(lcdNumber_2, 2, 1, 1, 1);
+        gridLayout_2->addWidget(lcdNumber_leftFirstMeta, 2, 1, 1, 1);
 
         label_rightThirdMeta = new QLabel(widget1);
         label_rightThirdMeta->setObjectName(QStringLiteral("label_rightThirdMeta"));
@@ -205,15 +205,15 @@ public:
 
         gridLayout_2->addWidget(label_leftThirdMeta, 3, 1, 1, 1);
 
-        lcdNumber_3 = new QLCDNumber(widget1);
-        lcdNumber_3->setObjectName(QStringLiteral("lcdNumber_3"));
+        lcdNumber_rightThirdMeta = new QLCDNumber(widget1);
+        lcdNumber_rightThirdMeta->setObjectName(QStringLiteral("lcdNumber_rightThirdMeta"));
 
-        gridLayout_2->addWidget(lcdNumber_3, 4, 0, 1, 1);
+        gridLayout_2->addWidget(lcdNumber_rightThirdMeta, 4, 0, 1, 1);
 
-        lcdNumber_4 = new QLCDNumber(widget1);
-        lcdNumber_4->setObjectName(QStringLiteral("lcdNumber_4"));
+        lcdNumber_leftThirdMeta = new QLCDNumber(widget1);
+        lcdNumber_leftThirdMeta->setObjectName(QStringLiteral("lcdNumber_leftThirdMeta"));
 
-        gridLayout_2->addWidget(lcdNumber_4, 4, 1, 1, 1);
+        gridLayout_2->addWidget(lcdNumber_leftThirdMeta, 4, 1, 1, 1);
 
         label_rightHeel = new QLabel(widget1);
         label_rightHeel->setObjectName(QStringLiteral("label_rightHeel"));
@@ -225,15 +225,15 @@ public:
 
         gridLayout_2->addWidget(label_leftHeel, 5, 1, 1, 1);
 
-        lcdNumber_5 = new QLCDNumber(widget1);
-        lcdNumber_5->setObjectName(QStringLiteral("lcdNumber_5"));
+        lcdNumber_rightHeel = new QLCDNumber(widget1);
+        lcdNumber_rightHeel->setObjectName(QStringLiteral("lcdNumber_rightHeel"));
 
-        gridLayout_2->addWidget(lcdNumber_5, 6, 0, 1, 1);
+        gridLayout_2->addWidget(lcdNumber_rightHeel, 6, 0, 1, 1);
 
-        lcdNumber_6 = new QLCDNumber(widget1);
-        lcdNumber_6->setObjectName(QStringLiteral("lcdNumber_6"));
+        lcdNumber_leftHeel = new QLCDNumber(widget1);
+        lcdNumber_leftHeel->setObjectName(QStringLiteral("lcdNumber_leftHeel"));
 
-        gridLayout_2->addWidget(lcdNumber_6, 6, 1, 1, 1);
+        gridLayout_2->addWidget(lcdNumber_leftHeel, 6, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
