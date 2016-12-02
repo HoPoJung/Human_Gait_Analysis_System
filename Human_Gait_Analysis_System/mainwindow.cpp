@@ -12,8 +12,10 @@ MainWindow::MainWindow(QWidget *parent) :
     status = new QLabel;
     ui->statusBar->addWidget(status);
     recordFSRClock->setInterval(1000);
+
     connect(serial, static_cast<void (QSerialPort::*)(QSerialPort::SerialPortError)>(&QSerialPort::error), this, &MainWindow::handleError);
     connect(recordFSRClock, SIGNAL(timeout()), this, SLOT(readyToRecordData()));
+    connect(recordFSRClock, SIGNAL(timeout()), this, SLOT(updateView()));
     settings.name = "/dev/ttyACM0";
     settings.baudRate = QSerialPort::Baud9600;
     settings.dataBits = QSerialPort::Data8;
@@ -24,6 +26,22 @@ MainWindow::MainWindow(QWidget *parent) :
 
     initActionsConnect();
 
+}
+
+void MainWindow::updateView()
+{
+    bool sensorConnectedAndHasData = sensors->leftAnkle->getConnectionStatus() == SENSOR_CONNECTION_CONNECTED && sensors->leftAnkle->hasImuData();
+
+    if(sensorConnectedAndHasData){
+        sensors->d = sensors->leftAnkle->getCurrentData();
+        updateUserInterface(&sensors->d);
+        qDebug() << "Hello";
+    }
+}
+
+void MainWindow::updateUserInterface(ImuData *d)
+{
+    ui->lcdNumber_leftAnkle->display(d->r[0]);
 }
 
 void MainWindow::readData(){
@@ -65,6 +83,15 @@ void MainWindow::openSerialPort()
         QMessageBox::critical(this, tr("Error"), serial->errorString());
         status->setText("Open error");
     }
+    manager = LpmsSensorManagerFactory();
+    sensors->leftAnkle = manager->addSensor(DEVICE_LPMS_B, "00:06:66:A0:BA:EC");
+    while(1){
+        if(sensors->leftAnkle->getConnectionStatus() == SENSOR_CONNECTION_CONNECTED && sensors->leftAnkle->hasImuData()){
+            status->setText("IMU left ankle is connected.");
+            break;
+        }
+    }
+
 }
 
 void MainWindow::closeSerialPort(){

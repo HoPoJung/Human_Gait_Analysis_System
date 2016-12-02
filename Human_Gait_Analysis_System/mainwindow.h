@@ -9,6 +9,12 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QTimer>
+#include <QDateTime>
+#include <QtConcurrent>
+#include <QFuture>
+
+#include "LpmsSensorI.h"
+#include "LpmsSensorManagerI.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,6 +26,7 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
+    void updateUserInterface(ImuData *d);
 
     struct SerialSettings {
         QString name;
@@ -42,6 +49,7 @@ private slots:
     void closeSerialPort();
     void readData();
     void readyToRecordData();
+    void updateView();
 
     void handleError(QSerialPort::SerialPortError error);
 
@@ -54,6 +62,19 @@ private:
     QSerialPort *serial;
     SerialSettings settings;
     QTimer *recordFSRClock;
+    struct LPSensor{
+        ImuData d;
+        LpmsSensorI* leftAnkle;
+        LpmsSensorI* rightAnkle;
+        LpmsSensorI* leftShank;
+        LpmsSensorI* rightShank;
+        LpmsSensorI* leftThigh;
+        LpmsSensorI* rightThigh;
+        LpmsSensorI* waist;
+    };
+
+    LPSensor *sensors;
+    LpmsSensorManagerI* manager;
 };
 
 #endif // MAINWINDOW_H

@@ -6,20 +6,189 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>438</width>
+    <height>368</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>211</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_waist">
+       <property name="text">
+        <string>Waist</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_waist"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_rightHip">
+       <property name="text">
+        <string>Right Hip</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_leftHip">
+       <property name="text">
+        <string>Left Hip</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLCDNumber" name="lcdNumber_rightHip"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_leftHip"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_rightKnee">
+       <property name="text">
+        <string>Right Knee</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_leftKnee">
+       <property name="text">
+        <string>Left Knee</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLCDNumber" name="lcdNumber_rightKnee"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_leftKnee"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_rightAnkle">
+       <property name="text">
+        <string>Right Ankle</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLabel" name="label_leftAnkle">
+       <property name="text">
+        <string>Left Ankle</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLCDNumber" name="lcdNumber_rightAnkle"/>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_leftAnkle"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>10</y>
+      <width>181</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_rightFoot">
+       <property name="text">
+        <string>Right</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_leftFoot">
+       <property name="text">
+        <string>Left</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_rightFirstMeta">
+       <property name="text">
+        <string>1st meta</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_leftFirstMeta">
+       <property name="text">
+        <string>1st meta</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLCDNumber" name="lcdNumber"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_2"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_rightThirdMeta">
+       <property name="text">
+        <string>3rd meta</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_leftThirdMeta">
+       <property name="text">
+        <string>3rd meta</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLCDNumber" name="lcdNumber_3"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_4"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_rightHeel">
+       <property name="text">
+        <string>Heel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLabel" name="label_leftHeel">
+       <property name="text">
+        <string>Heel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLCDNumber" name="lcdNumber_5"/>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_6"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>438</width>
      <height>27</height>
     </rect>
    </property>
